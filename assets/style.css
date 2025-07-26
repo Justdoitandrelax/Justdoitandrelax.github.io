@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "JetBrains Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+/*Start*/
+
+.header-mask {
+    display: flex;
+    background-image: url("https://raw.githubusercontent.com/Justdoitandrelax/images/refs/heads/main/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%BE%D1%82%20Wiroj%20Sidhisoradej%20%D0%BD%D0%B0%20Freepik.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    position: relative;
+}
+
+.header-mask::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.3;
+
+}
+
+.wrapper {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 1;
+}
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image {
+    max-width: 200px;
+    max-height: 100px;
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-family: "JetBrains Sans", sans-serif;
+}
+
+.menu > a {
+    text-decoration: none;
+    color: white;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    font-family: "JetBrains Sans", sans-serif;
+}
+
+/*Main content*/
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 1300px;
+    justify-content: space-between;
+}
+
+.posts {
+    display: block;
+}
+
+.post {
+    display: flex;
+    width: 620px;
+    height: auto;
+}
+
+.post > img {
+    width: 300px;
+    height: 250px;
+    object-fit: contain;
+    background-color: white;
+}
+
+.block {
+    display: inline-block;
+    max-width: 300px;
+    height: auto;
+    margin-left: 20px;
+    padding-top: 0;
+    align-items: flex-start;
+ }
+
+.block > h2 {
+    font-family: "JetBrains Sans", sans-serif;
+}
+
+.block > a {
+    text-decoration: none;
+    color: black;
+}
+
+.block > p {
+    font-family: "JetBrains Sans", sans-serif;
+    font-size: 13px;
+}
+
+/*Gallery*/
+
+.gallery {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    background: white;
+    margin-top: 100px;
+}
+
+.wrapper-gallery {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    height: 500px;
+    overflow: visible;
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--v) * 33deg)) translateZ(400px);
+}
+
+.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 200px;
+    max-width: 200px;
+    object-fit: contain;
+    transition: 2s;
+}
+
+.wrapper-gallery div:hover img {
+    transform: translateY(-50px) scale(1.2);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+}
+
+.form-container > h2 {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: "JetBrains Sans", sans-serif;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+/*Feedback form*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.form > label {
+    font-family: "JetBrains Sans", sans-serif;
+    padding-top: 10px;
+}
+
+.form > input {
+    height: 30px;
+    border: 2px solid black;
+}
+
+.form label span {
+    color: blueviolet;
+}
+
+.form textarea {
+    border: 2px solid black;
+}
+
+.form input:hover,
+.form textarea:hover {
+    border: 2px solid blueviolet;
+}
+
+.form input:focus,
+.form textarea:focus {
+    outline: blueviolet;
+}
+
+.button {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.button:hover {
+    background-color: blueviolet;
+    border: none;
+}
+
+/*Footer*/
+
+.footer {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.Icons {
+    border-top: 2px solid black;
+}
+
+.Icons > img {
+    margin-top: 20px;
+}
+
+.back-to-top {
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    background-color: blueviolet;
+    color: white;
+    right: 2rem;
+    bottom: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top:hover {
+    background-color: white;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+
+}
