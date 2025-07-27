@@ -1,5 +1,6 @@
 @font-face {
     font-family: "JetBrains Sans", sans-serif;
+    src: url('.../fonts/JetBrainsSans[wght]-VF.ttf');
 }
 
 html {
