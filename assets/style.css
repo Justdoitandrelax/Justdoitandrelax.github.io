@@ -108,7 +108,7 @@ body {
     align-items: flex-start;
  }
 
-.block > h2 {
+.block h2 {
     font-family: "JetBrains Sans", sans-serif;
 }
 
